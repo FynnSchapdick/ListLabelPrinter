@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "bb8d938d-85e0-44db-8a1d-6158339a16ee",
+		"name": "ListLabelPrinter.Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10674792"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;v=1.0",
+						"type": "text"
+					},
+					{
+						"key": "api-version",
+						"value": "1.0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reportFile\" : \"\\\\meinopfad\\templates\\products.lst\",\r\n    \"dataSource\" : [\r\n        {\r\n            \"name\" : \"Mein Produktname\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:7211/print",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7211",
+					"path": [
+						"print"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

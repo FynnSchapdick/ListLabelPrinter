@@ -1,0 +1,33 @@
+﻿using FluentValidation;
+using FluentValidation.Results;
+using ListLabelPrinter.Api.Features.Models;
+using Microsoft.AspNetCore.Http;
+
+namespace ListLabelPrinter.Api.Features.Filters;
+
+public sealed class ValidatorFilter<T> : IEndpointFilter where T : class
+{
+    private readonly IValidator<T> _validator;
+
+    public ValidatorFilter(IValidator<T> validator)
+    {
+        _validator = validator;
+    }
+    
+    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+    {
+        T? validatable = context.Arguments.SingleOrDefault(x => x?.GetType() == typeof(T)) as T;
+        if (validatable is null)
+        {
+            return Results.BadRequest();
+        }
+
+        ValidationResult? validationResult = await _validator.ValidateAsync(validatable);
+        if (!validationResult.IsValid)
+        {
+            return Results.BadRequest(validationResult.Errors.ToResponse());
+        }
+
+        return await next(context);
+    }
+}

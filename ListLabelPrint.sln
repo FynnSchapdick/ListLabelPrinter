@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{AB494773-C473-4573-9627-8623FE5B0E1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api", "Source\ListLabelPrinter.Api\ListLabelPrinter.Api.csproj", "{79CBDCBF-5078-4B6E-8014-01B3384849E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Infrastructure", "Source\ListLabelPrinter.Api.Infrastructure\ListLabelPrinter.Api.Infrastructure.csproj", "{D364C605-ACFD-4845-9467-488618AB2797}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Features", "Source\ListLabelPrinter.Api.Features\ListLabelPrinter.Api.Features.csproj", "{18289D65-7A6C-4A95-9B39-2963A0DF761B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{9F8DCB93-42AB-4D53-9C84-0F38BA953CAA}"
+	ProjectSection(SolutionItems) = preProject
+		Postman\ListLabelPrinter.Api.json = Postman\ListLabelPrinter.Api.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79CBDCBF-5078-4B6E-8014-01B3384849E9} = {AB494773-C473-4573-9627-8623FE5B0E1A}
+		{D364C605-ACFD-4845-9467-488618AB2797} = {AB494773-C473-4573-9627-8623FE5B0E1A}
+		{18289D65-7A6C-4A95-9B39-2963A0DF761B} = {AB494773-C473-4573-9627-8623FE5B0E1A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79CBDCBF-5078-4B6E-8014-01B3384849E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79CBDCBF-5078-4B6E-8014-01B3384849E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79CBDCBF-5078-4B6E-8014-01B3384849E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79CBDCBF-5078-4B6E-8014-01B3384849E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D364C605-ACFD-4845-9467-488618AB2797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D364C605-ACFD-4845-9467-488618AB2797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D364C605-ACFD-4845-9467-488618AB2797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D364C605-ACFD-4845-9467-488618AB2797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18289D65-7A6C-4A95-9B39-2963A0DF761B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18289D65-7A6C-4A95-9B39-2963A0DF761B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18289D65-7A6C-4A95-9B39-2963A0DF761B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18289D65-7A6C-4A95-9B39-2963A0DF761B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
