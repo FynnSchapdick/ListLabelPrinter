@@ -1,7 +1,3 @@
 ﻿namespace ListLabelPrinter.Api.Features.Models;
 
-public sealed class PrintRequest
-{
-    public string ReportFile { get; set; }
-    public object DataSource { get; set; }
-}
+public sealed record PrintRequest(string ReportFile, object DataSource);
