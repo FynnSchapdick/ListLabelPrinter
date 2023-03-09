@@ -1,4 +1,5 @@
 ﻿using combit.Reporting;
+using combit.Reporting.DataProviders;
 using ListLabelPrinter.Api.Infrastructure.Services.Abstractions;
 
 namespace ListLabelPrinter.Api.Infrastructure.Services;
@@ -16,7 +17,7 @@ public sealed class PrintService : IPrintService
     {
         _listLabel.Language = parameters.Language;
         _listLabel.AutoProjectFile = parameters.ReportFile;
-        _listLabel.DataSource = new {};
+        _listLabel.DataSource = new JsonDataProvider(parameters.DataSource.ToString());
         _listLabel.Print(LlProject.List, "Printer Name");
         return Task.CompletedTask;
     }

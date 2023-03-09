@@ -27,14 +27,23 @@ public sealed class ExceptionMiddleware : IMiddleware
     }
     private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
-        ProblemDetails problemDetails = exception switch
+        ProblemDetails problemDetails = GetProblemDetails(exception);
+        context.Response.ContentType = ResponseContentType;
+        context.Response.StatusCode = problemDetails.Status.Value;
+        string json = JsonSerializer.Serialize(problemDetails);
+        await context.Response.WriteAsync(json);
+    }
+
+    private static ProblemDetails GetProblemDetails(Exception exception)
+    {
+        return exception switch
         {
             MissingRequiredConfigurationException missingRequiredConfigurationException => new ProblemDetails
             {
                 Status = (int) HttpStatusCode.InternalServerError,
                 Type = ServerError,
                 Title = ServerError,
-                Detail = missingRequiredConfigurationException.Message 
+                Detail = missingRequiredConfigurationException.Message
             },
             FileNotFoundException fileNotFoundException => new ProblemDetails
             {
@@ -51,11 +60,5 @@ public sealed class ExceptionMiddleware : IMiddleware
                 Detail = exception.Message
             }
         };
-        
-        context.Response.ContentType = ResponseContentType;
-        context.Response.StatusCode = problemDetails.Status.Value;
-
-        var json = JsonSerializer.Serialize(problemDetails);
-        await context.Response.WriteAsync(json);
     }
 }

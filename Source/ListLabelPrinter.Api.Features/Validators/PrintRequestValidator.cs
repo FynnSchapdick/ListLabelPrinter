@@ -1,16 +1,24 @@
 ﻿using FluentValidation;
 using ListLabelPrinter.Api.Features.Models;
 
-namespace ListLabelPrinter.Api.Features.Validators;
-
-public sealed class PrintRequestValidator : AbstractValidator<PrintRequest>
+namespace ListLabelPrinter.Api.Features.Validators
 {
-    public PrintRequestValidator()
+    public sealed class PrintRequestValidator : AbstractValidator<PrintRequest>
     {
-        RuleFor(x => x.ReportFile)
-            .NotEmpty();
-        
-        RuleFor(x => x.DataSource)
-            .NotNull();
+        private const string InvalidPathMessage = "Invalid file path";
+        private const string FileNotFoundMessage = "Report file not found";
+
+        public PrintRequestValidator()
+        {
+            RuleFor(x => x.ReportFile)
+                .NotEmpty()
+                .Must(Path.IsPathRooted)
+                .WithMessage(InvalidPathMessage)
+                .Must(File.Exists)
+                .WithMessage(FileNotFoundMessage);
+
+            RuleFor(x => x.DataSource)
+                .NotNull();
+        }
     }
 }

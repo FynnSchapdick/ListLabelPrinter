@@ -16,8 +16,7 @@ public sealed class ValidatorFilter<T> : IEndpointFilter where T : class
     
     public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
     {
-        T? validatable = context.Arguments.SingleOrDefault(x => x?.GetType() == typeof(T)) as T;
-        if (validatable is null)
+        if (context.Arguments.SingleOrDefault(x => x?.GetType() == typeof(T)) is not T validatable)
         {
             return Results.BadRequest();
         }
