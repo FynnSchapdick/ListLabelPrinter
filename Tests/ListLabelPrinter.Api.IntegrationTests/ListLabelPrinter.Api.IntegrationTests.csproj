@@ -27,7 +27,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Lib\ListLabelPrint.HttpClient\ListLabelPrint.HttpClient.csproj" />
-      <ProjectReference Include="..\..\Source\ListLabelPrinter.Api\ListLabelPrinter.Api.csproj" />
       <ProjectReference Include="..\..\Source\Service\ListLabelPrinter.Api\ListLabelPrinter.Api.csproj" />
     </ItemGroup>
 

@@ -10,7 +10,7 @@
       <ProjectReference Include="..\ListLabelPrinter.Api.Features\ListLabelPrinter.Api.Features.csproj" />
       <ProjectReference Include="..\ListLabelPrinter.Api.Infrastructure\ListLabelPrinter.Api.Infrastructure.csproj" />
     </ItemGroup>
-
+    
     <ItemGroup>
       <Folder Include="wwwroot" />
     </ItemGroup>

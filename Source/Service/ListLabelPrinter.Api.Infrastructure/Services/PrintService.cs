@@ -23,8 +23,10 @@ public sealed class PrintService : IPrintService
             _listLabel.Print(parameters.LlProject, parameters.ReportFile);
             return Task.CompletedTask;
         }
-        
-        _listLabel.Core.LlSetPrinterInPrinterFile(parameters.LlProject, parameters.ReportFile, parameters.PrinterName);
+        // <ItemGroup>
+        //     <Reference Include="System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+        // </ItemGroup>
+        //_listLabel.Core.LlSetPrinterInPrinterFile(parameters.LlProject, parameters.ReportFile, parameters.PrinterName);
         _listLabel.Print();
         return Task.CompletedTask;
     }

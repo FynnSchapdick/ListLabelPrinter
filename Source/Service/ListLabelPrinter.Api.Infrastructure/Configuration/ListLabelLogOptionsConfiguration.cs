@@ -5,12 +5,12 @@ namespace ListLabelPrinter.Api.Infrastructure.Configuration;
 
 public sealed class ListLabelLogOptionsConfiguration : IConfigureOptions<ListLabelLogOptions>
 {
-    private const string EnableLicensingLogging = "ListLabelLogging:EnableLicensing";
-    private const string EnableApiCallsLogging = "ListLabelLogging:EnableApiCalls";
-    private const string EnableDataProviderLogging = "ListLabelLogging:EnableDataProvider";
-    private const string EnablePrinterInformationLogging = "ListLabelLogging:EnablePrinterInformation";
-    private const string EnableDotNetComponentLogging = "ListLabelLogging:EnableDotNetComponent";
-    private const string EnableOtherLogging = "ListLabelLogging:EnableOther";
+    private const string EnableLicensingLogging = "ListLabel:Logging:EnableLicensing";
+    private const string EnableApiCallsLogging = "ListLabel:Logging:EnableApiCalls";
+    private const string EnableDataProviderLogging = "ListLabel:Logging:EnableDataProvider";
+    private const string EnablePrinterInformationLogging = "ListLabel:Logging:EnablePrinterInformation";
+    private const string EnableDotNetComponentLogging = "ListLabel:Logging:EnableDotNetComponent";
+    private const string EnableOtherLogging = "ListLabel:Logging:EnableOther";
     
     private readonly IConfiguration _configuration;
     
