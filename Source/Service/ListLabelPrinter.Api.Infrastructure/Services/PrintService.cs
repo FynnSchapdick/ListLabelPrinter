@@ -15,10 +15,17 @@ public sealed class PrintService : IPrintService
 
     public Task Print(PrintParameters parameters)
     {
-        _listLabel.Language = parameters.Language;
-        _listLabel.AutoProjectFile = parameters.ReportFile;
+        _listLabel.Language = parameters.Language ?? LlLanguage.Default;
         _listLabel.DataSource = new JsonDataProvider(parameters.DataSource.ToString());
-        _listLabel.Print(LlProject.List, "Printer Name");
+        
+        if (string.IsNullOrEmpty(parameters.PrinterName))
+        {
+            _listLabel.Print(parameters.LlProject, parameters.ReportFile);
+            return Task.CompletedTask;
+        }
+        
+        _listLabel.Core.LlSetPrinterInPrinterFile(parameters.LlProject, parameters.ReportFile, parameters.PrinterName);
+        _listLabel.Print();
         return Task.CompletedTask;
     }
 }

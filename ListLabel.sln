@@ -2,11 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{AB494773-C473-4573-9627-8623FE5B0E1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api", "Source\ListLabelPrinter.Api\ListLabelPrinter.Api.csproj", "{79CBDCBF-5078-4B6E-8014-01B3384849E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api", "Source\Service\ListLabelPrinter.Api\ListLabelPrinter.Api.csproj", "{79CBDCBF-5078-4B6E-8014-01B3384849E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Infrastructure", "Source\ListLabelPrinter.Api.Infrastructure\ListLabelPrinter.Api.Infrastructure.csproj", "{D364C605-ACFD-4845-9467-488618AB2797}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Infrastructure", "Source\Service\ListLabelPrinter.Api.Infrastructure\ListLabelPrinter.Api.Infrastructure.csproj", "{D364C605-ACFD-4845-9467-488618AB2797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Features", "Source\ListLabelPrinter.Api.Features\ListLabelPrinter.Api.Features.csproj", "{18289D65-7A6C-4A95-9B39-2963A0DF761B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Features", "Source\Service\ListLabelPrinter.Api.Features\ListLabelPrinter.Api.Features.csproj", "{18289D65-7A6C-4A95-9B39-2963A0DF761B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{9F8DCB93-42AB-4D53-9C84-0F38BA953CAA}"
 	ProjectSection(SolutionItems) = preProject
@@ -21,17 +21,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{1BCDF7A4-245
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrint.HttpClient", "Lib\ListLabelPrint.HttpClient\ListLabelPrint.HttpClient.csproj", "{8864A56F-1F3B-43BF-B687-76FA1DE1391B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{0AE0220D-F13A-4654-B385-3DEA37C8F8A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Designer", "Designer", "{E6761C30-385B-4D0D-820F-A131CD090BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelDesigner.App", "Source\Client\ListLabelDesigner.App\ListLabelDesigner.App.csproj", "{6349E390-6D1E-471C-9AF0-0F808575E834}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{79CBDCBF-5078-4B6E-8014-01B3384849E9} = {AB494773-C473-4573-9627-8623FE5B0E1A}
-		{D364C605-ACFD-4845-9467-488618AB2797} = {AB494773-C473-4573-9627-8623FE5B0E1A}
-		{18289D65-7A6C-4A95-9B39-2963A0DF761B} = {AB494773-C473-4573-9627-8623FE5B0E1A}
 		{FB8654C5-CB45-4DB6-8251-9E65E8830D4C} = {3E5399F4-E93C-47BE-B4C2-6FD2A49DDACB}
 		{8864A56F-1F3B-43BF-B687-76FA1DE1391B} = {1BCDF7A4-2450-449D-9EE2-08225DF56754}
+		{0AE0220D-F13A-4654-B385-3DEA37C8F8A1} = {AB494773-C473-4573-9627-8623FE5B0E1A}
+		{79CBDCBF-5078-4B6E-8014-01B3384849E9} = {0AE0220D-F13A-4654-B385-3DEA37C8F8A1}
+		{18289D65-7A6C-4A95-9B39-2963A0DF761B} = {0AE0220D-F13A-4654-B385-3DEA37C8F8A1}
+		{D364C605-ACFD-4845-9467-488618AB2797} = {0AE0220D-F13A-4654-B385-3DEA37C8F8A1}
+		{E6761C30-385B-4D0D-820F-A131CD090BB5} = {AB494773-C473-4573-9627-8623FE5B0E1A}
+		{6349E390-6D1E-471C-9AF0-0F808575E834} = {E6761C30-385B-4D0D-820F-A131CD090BB5}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{79CBDCBF-5078-4B6E-8014-01B3384849E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -54,5 +63,9 @@ Global
 		{8864A56F-1F3B-43BF-B687-76FA1DE1391B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8864A56F-1F3B-43BF-B687-76FA1DE1391B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8864A56F-1F3B-43BF-B687-76FA1DE1391B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6349E390-6D1E-471C-9AF0-0F808575E834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6349E390-6D1E-471C-9AF0-0F808575E834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6349E390-6D1E-471C-9AF0-0F808575E834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6349E390-6D1E-471C-9AF0-0F808575E834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

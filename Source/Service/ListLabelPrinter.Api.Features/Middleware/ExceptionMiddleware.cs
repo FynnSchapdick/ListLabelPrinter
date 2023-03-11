@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Text.Json;
+using ListLabelPrinter.Api.Features.Extensions;
 using ListLabelPrinter.Api.Infrastructure.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
