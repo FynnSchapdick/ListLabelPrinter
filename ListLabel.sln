@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Designer", "Designer", "{E6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelDesigner.App", "Source\Client\ListLabelDesigner.App\ListLabelDesigner.App.csproj", "{6349E390-6D1E-471C-9AF0-0F808575E834}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Data", "Source\Service\ListLabelPrinter.Api.Data\ListLabelPrinter.Api.Data.csproj", "{ED041EC1-A50D-46F9-85E4-6EDDE9A365B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,7 @@ Global
 		{D364C605-ACFD-4845-9467-488618AB2797} = {0AE0220D-F13A-4654-B385-3DEA37C8F8A1}
 		{E6761C30-385B-4D0D-820F-A131CD090BB5} = {AB494773-C473-4573-9627-8623FE5B0E1A}
 		{6349E390-6D1E-471C-9AF0-0F808575E834} = {E6761C30-385B-4D0D-820F-A131CD090BB5}
+		{ED041EC1-A50D-46F9-85E4-6EDDE9A365B6} = {0AE0220D-F13A-4654-B385-3DEA37C8F8A1}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{79CBDCBF-5078-4B6E-8014-01B3384849E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -67,5 +70,9 @@ Global
 		{6349E390-6D1E-471C-9AF0-0F808575E834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6349E390-6D1E-471C-9AF0-0F808575E834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6349E390-6D1E-471C-9AF0-0F808575E834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED041EC1-A50D-46F9-85E4-6EDDE9A365B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED041EC1-A50D-46F9-85E4-6EDDE9A365B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED041EC1-A50D-46F9-85E4-6EDDE9A365B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED041EC1-A50D-46F9-85E4-6EDDE9A365B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
