@@ -1,5 +1,7 @@
-using ListLabelPrinter.Api.Features.Extensions;
-using ListLabelPrinter.Api.Infrastructure.Extensions;
+using ListLabelPrinter.Api.Extensions;
+using ListLabelPrinter.Core.Extensions;
+using ListLabelPrinter.Data.Extensions;
+using ListLabelPrinter.Infrastructure.Extensions;
 using Serilog;
 
 IConfiguration configuration = new ConfigurationBuilder()
@@ -13,10 +15,12 @@ try
     Log.Information("Starting up...");
     
     WebApplication.CreateBuilder(args)
-        .AddPrinterInfrastructure()
-        .AddPrinterApi()
+        .AddCore()
+        .AddInfrastructure()
+        .AddData()
+        .AddApi()
         .Build()
-        .UsePrinterApi()
+        .UseApi()
         .Run();
     
     Log.Information("Shutting down...");

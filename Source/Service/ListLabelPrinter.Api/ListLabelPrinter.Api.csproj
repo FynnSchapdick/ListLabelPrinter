@@ -7,12 +7,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ListLabelPrinter.Api.Features\ListLabelPrinter.Api.Features.csproj" />
-      <ProjectReference Include="..\ListLabelPrinter.Api.Infrastructure\ListLabelPrinter.Api.Infrastructure.csproj" />
+      <ProjectReference Include="..\ListLabelPrinter.Core\ListLabelPrinter.Core.csproj" />
+      <ProjectReference Include="..\ListLabelPrinter.Data\ListLabelPrinter.Data.csproj" />
+      <ProjectReference Include="..\ListLabelPrinter.Infrastructure\ListLabelPrinter.Infrastructure.csproj" />
     </ItemGroup>
     
     <ItemGroup>
       <Folder Include="wwwroot" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <None Update="local.db">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

@@ -4,9 +4,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{AB4947
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api", "Source\Service\ListLabelPrinter.Api\ListLabelPrinter.Api.csproj", "{79CBDCBF-5078-4B6E-8014-01B3384849E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Infrastructure", "Source\Service\ListLabelPrinter.Api.Infrastructure\ListLabelPrinter.Api.Infrastructure.csproj", "{D364C605-ACFD-4845-9467-488618AB2797}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Infrastructure", "Source\Service\ListLabelPrinter.Infrastructure\ListLabelPrinter.Infrastructure.csproj", "{D364C605-ACFD-4845-9467-488618AB2797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Api.Features", "Source\Service\ListLabelPrinter.Api.Features\ListLabelPrinter.Api.Features.csproj", "{18289D65-7A6C-4A95-9B39-2963A0DF761B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Core", "Source\Service\ListLabelPrinter.Core\ListLabelPrinter.Core.csproj", "{18289D65-7A6C-4A95-9B39-2963A0DF761B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{9F8DCB93-42AB-4D53-9C84-0F38BA953CAA}"
 	ProjectSection(SolutionItems) = preProject
@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Designer", "Designer", "{E6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelDesigner.App", "Source\Client\ListLabelDesigner.App\ListLabelDesigner.App.csproj", "{6349E390-6D1E-471C-9AF0-0F808575E834}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Infrastructure.UnitTests", "Tests\ListLabelPrinter.Infrastructure.UnitTests\ListLabelPrinter.Infrastructure.UnitTests.csproj", "{642ABA40-AC0D-49D5-82DA-A15348858274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListLabelPrinter.Data", "Source\Service\ListLabelPrinter.Data\ListLabelPrinter.Data.csproj", "{D646B025-8621-46D6-B79D-15DD7E7B4922}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,8 @@ Global
 		{D364C605-ACFD-4845-9467-488618AB2797} = {0AE0220D-F13A-4654-B385-3DEA37C8F8A1}
 		{E6761C30-385B-4D0D-820F-A131CD090BB5} = {AB494773-C473-4573-9627-8623FE5B0E1A}
 		{6349E390-6D1E-471C-9AF0-0F808575E834} = {E6761C30-385B-4D0D-820F-A131CD090BB5}
+		{642ABA40-AC0D-49D5-82DA-A15348858274} = {3E5399F4-E93C-47BE-B4C2-6FD2A49DDACB}
+		{D646B025-8621-46D6-B79D-15DD7E7B4922} = {0AE0220D-F13A-4654-B385-3DEA37C8F8A1}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{79CBDCBF-5078-4B6E-8014-01B3384849E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -67,5 +73,13 @@ Global
 		{6349E390-6D1E-471C-9AF0-0F808575E834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6349E390-6D1E-471C-9AF0-0F808575E834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6349E390-6D1E-471C-9AF0-0F808575E834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642ABA40-AC0D-49D5-82DA-A15348858274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642ABA40-AC0D-49D5-82DA-A15348858274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642ABA40-AC0D-49D5-82DA-A15348858274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642ABA40-AC0D-49D5-82DA-A15348858274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D646B025-8621-46D6-B79D-15DD7E7B4922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D646B025-8621-46D6-B79D-15DD7E7B4922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D646B025-8621-46D6-B79D-15DD7E7B4922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D646B025-8621-46D6-B79D-15DD7E7B4922}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
